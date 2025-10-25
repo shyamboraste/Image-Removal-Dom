@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image remove with the dom</title>
+    <style>
+        #sham{
+            display:grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 50px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 5px black;
+            transition: transform 0.3s ease;
+        }
+        img:hover{
+            transform: scale(1.05);
+        }
+        body{
+          background-image: linear-gradient( 109.5deg,  rgba(37,118,116,1) 10.5%, rgba(39,220,96,1) 68.5% );
+        }
+        .headings{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .head{
+            color: beige;
+        }
+        .second_head{
+            color: beige;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <div class="headings">
+        <h1 class="head">
+            A basic web project developed using HTML and JavaScript.
+        </h1>
+
+        <div>
+
+        <h4 class="second_head">
+            Tap the image you want to delete. 
+        </h4>
+    </div>
+
+<hr>
+    <div id="sham">
+           <p> <img id="buterfly" src="https://images.unsplash.com/photo-1631328112338-e3cb68843894?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1dGVyZmx5fGVufDB8fDB8fHww"
+          height="200px" alt="image"></p>
+    <p><img id="parot" src="https://images.unsplash.com/photo-1527710265200-4fea905bb92e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmlyZHMlMjBzYWR8ZW58MHx8MHx8fDA%3D"
+        height="200px" alt="image"></p>
+    <p><img id="bird" src="https://images.unsplash.com/photo-1686581978772-6fd56ec4c6b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJpcmRzJTIwc2FkfGVufDB8fDB8fHww"
+        height="200px" alt="image"></p>
+    <p><img id="smallbird" src="https://plus.unsplash.com/premium_photo-1733792645100-6bbf38945165?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJpcmRzJTIwc2FkfGVufDB8fDB8fHww"
+        height="200px" alt="image"></p>
+    <p><img id="fish" src="https://images.unsplash.com/photo-1604331195218-07efb5f96152?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJpcmRzJTIwc2FkfGVufDB8fDB8fHww"
+        height="200px" alt="image"></p>
+    <p><img id="tamk" src="https://images.unsplash.com/photo-1624381130876-2247296558d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJpcmRzJTIwc2FkfGVufDB8fDB8fHww"
+        height="200px" alt="image"></p>
+    <p><img id="cow" src="https://media.istockphoto.com/id/186249924/photo/crow-sitting-on-a-gravestone.webp?a=1&b=1&s=612x612&w=0&k=20&c=BkYorEC2dMwiqAJbUD38hfZZXaZnTB9O0IsQuOvyUyc="
+        height="200px" alt="image"></p>
+    <p><img id="see" src="https://media.istockphoto.com/id/2191934583/photo/the-duck-has-a-distinctive-orange-beak-and-feet-the-birds-body-is-primarily-brown-with-a.webp?a=1&b=1&s=612x612&w=0&k=20&c=PLA9-6RKs7mG3puMqtsyJ2id3BNwgrjatvepwvcnNKc="
+        height="200px" alt="image"></p>
+    <p><img id="what" src="https://media.istockphoto.com/id/2185225611/photo/southern-cassowary-flightless-bird.webp?a=1&b=1&s=612x612&w=0&k=20&c=1U_SC8-XcJYDSLRfy81fC2ZhtJJRg6stvBbn2Vn39XE="
+        height="200px" alt="image"></p>
+    <p> <img id="not" src="https://media.istockphoto.com/id/182416040/photo/dead-bird.jpg?s=612x612&w=0&k=20&c=laJWDxHZUTezQf5W4uSoUphpcHiZeXtrYwn36qlpqfY="
+        height="200px" alt="image"></p>
+     <p><img id="hii" src="https://media.istockphoto.com/id/517899463/photo/puffins-having-a-meeting.jpg?s=612x612&w=0&k=20&c=4cS5eapdzhQ1lbq4u8SI4e9nFQ-0NTsVBc4fTEdcc2A="
+        height="200px" alt="image"></p>
+     <p><img id="my" src="https://media.istockphoto.com/id/1595680687/photo/australian-zebra-finch-birds-in-cage-for-sale-in-a-bird-market-in-india.jpg?s=1024x1024&w=is&k=20&c=rWJAhlXtDwXD5etuKiffzYT6s-pd9U4TrEaZzVlcV9I="
+        height="200px" alt="image"></p>
+     <p><img id="dear" src="https://media.istockphoto.com/id/1344560021/photo/dead-chicken-laying-on-a-grass-with-no-wounds.jpg?s=612x612&w=0&k=20&c=VHC9g3tB_tVwKC5lWh5b8nDAuil37ph5i9CYHsFFLbk="
+        height="200px" alt="image"></p>
+     <p><img id="friends" src="https://media.istockphoto.com/id/1191998571/photo/green-parrot-playing-inside-the-cage.jpg?s=612x612&w=0&k=20&c=lE2ObIFqz7dKqqfqyqIQKOg9jK5rLmlnFEmPuxq1fxk="
+        height="200px" alt="image"></p>
+     <p><img id="how" src="https://media.istockphoto.com/id/523040594/photo/shelter-for-homeless-dogs-waiting-for-a-new-owner.jpg?s=612x612&w=0&k=20&c=DcXrbeCGoHQWJPRj4TPZVa_VjvAxCGaPVX5dIX2dXA8="
+        height="200px" alt="image"></p>
+    <p><img id="are" src="https://media.istockphoto.com/id/144219898/photo/please-free-me.jpg?s=612x612&w=0&k=20&c=-uN5td7WGzs657EvTNi518365CD142lYRK513wMCSy8="
+        height="200px" alt="image"></p>
+     <p><img id="you" src="https://images.pexels.com/photos/248159/pexels-photo-248159.jpeg?auto=compress&cs=tinysrgb&w=600"
+        height="200px" alt="image"></p>
+     <p><img id="ok" src="https://images.pexels.com/photos/68507/spring-flowers-flowers-collage-floral-68507.jpeg?auto=compress&cs=tinysrgb&w=600"
+        height="200px" alt="image"></p>
+</div>
+<hr>
+
+
+
+    </div>
+
+</body>
+
+<script>
+    document.getElementById('sham').addEventListener('click' ,function(e){
+        console.log(e.target.parentNode.tagName)
+        let removeit = e.target.parentNode;
+        removeit.remove();
+    },false)
+</script>
+</html>
